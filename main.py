@@ -1,3 +1,4 @@
+"""This is a calculator program that supports long equations"""
 import sqlite3
 from logging import getLogger, config
 from dict_config import dict_config
@@ -9,7 +10,19 @@ logger = getLogger("logger")
 NEGATIVES_DICT = dict()
 
 
-def find_indexes(pattern: str):
+def find_indexes(pattern: str) -> tuple[int, int]:
+    """The function returns indexes of open and close brackets
+    of first occurrence of most inner brackets
+
+    Args
+        pattern (str): An expression where the indexes should be found
+
+    Returns
+        tuple(int, int): Index of open brakcet, index of closed bracket
+
+    Raises
+        ValueError: if closed bracket was found,
+        but no open bracket found before"""
     logger.debug(f"func called: find_indexes( {pattern} )")
     stack = []
     for index, char in enumerate(pattern):
@@ -19,12 +32,23 @@ def find_indexes(pattern: str):
             if stack:
                 ob_ind = stack.pop()
                 logger.debug(f"func returns:  ob_ind, index: {[ob_ind, index]}")
-                return ob_ind, index
+                return (ob_ind, index)
             else:
                 raise ValueError("Too many closed brackets")
 
 
-def replace_negative(negative_n: int) -> str:
+def replace_negative(negative_n: float) -> str:
+    """Replaces negative numbers with generated variables of n<number>n format.
+
+    Args
+        negative_n (float)
+
+    Returns
+        generated key (str)
+
+    Example:
+        replace_negative(-15) -> n0n
+        """
     logger.debug(f"func called: replace_negative( {negative_n} )")
     if NEGATIVES_DICT:
         last_key_num: int = int(
@@ -43,6 +67,15 @@ def replace_negative(negative_n: int) -> str:
 
 
 def parce_and_replace_negative(equation: str):
+    """Looks for a negative numbers in equation
+    and replaces them with generated variables. Returns same eqution,
+    but with replaced negative numbers
+
+    Args
+        equation (str)
+
+    Returns
+        equation (str)"""
     logger.debug(f"func called: parce_and_replace_negative( {equation} )")
     matches = re.findall(r"\(-\d+\)", equation)
     for neg_n in matches:
@@ -53,6 +86,16 @@ def parce_and_replace_negative(equation: str):
 
 
 def do_powers(equation: str):
+    """Performs mathematical operations regarding powers.
+
+    Args
+        equation (str): An equation with powers in it
+
+    Returns
+        equation (str): An equation without powers in it
+
+    Example
+        do_powers(3^2*4-5) -> 9*4-5"""
     logger.debug(f"func called: do_powers( {equation} )")
     matches = re.findall(r"(n?\d+\.?\d*+n?)\^(n?\d+\.?\d*+n?)", equation)
     for power_group in matches:
@@ -72,6 +115,16 @@ def do_powers(equation: str):
 
 
 def do_multidiv(equation: str) -> str:
+    """Performs mathematical operations regarding multiplication and division.
+
+    Args
+        equation (str): An equation with multiplication and division in it
+
+    Returns
+        equation (str): An equation without multiplication and division in it
+
+    Example
+        do_multidiv(9*4-5) -> 36-5"""
     logger.debug(f"func called: do_multidiv( {equation} )")
     while "*" in equation or "/" in equation:
         match = re.search(r"(n?\d+\.?\d*+n?)([*/])(n?\d+\.?\d*+n?)", equation)
@@ -95,6 +148,16 @@ def do_multidiv(equation: str) -> str:
 
 
 def do_plussub(equation: str) -> int:
+    """Performs mathematical operations regarding addition and subtractions.
+
+    Args
+        equation (str): An equation with addition and subtractions in it
+
+    Returns
+        equation (float): An equation without addition and subtractions in it
+
+    Example
+        do_multidiv(36-5) -> 31"""
     logger.debug(f"func called: do_plussub( {equation} )")
     match: list[str] = re.findall(r"[+-]?n?\d+\.?\d*n?", equation)
     nums = list()
@@ -114,6 +177,13 @@ def do_plussub(equation: str) -> int:
 
 
 def do_math(equation: str):
+    """Performs mathematical operations on equation with the right sequence.
+
+    Args
+        equatoin (str)
+
+    Returns
+        equatoin (str)"""
     logger.debug(f"func called: do_math( {equation} )")
     if "^" in equation:
         equation = do_powers(equation)
@@ -128,22 +198,32 @@ def do_math(equation: str):
 
 
 def return_final_answer(equation: str) -> float:
+    """Checks if an equation is variable,
+    if so changes it back to negative number,
+    and returns a float number.
+
+    Args
+        equation (str)
+
+    Returns
+        answer (float)"""
     logger.debug(f"func called: return_final_answer( {equation} )")
-    if equation.startswith("n") and equation.endswith("n"):
+    if str(equation).startswith("n") and str(equation).endswith("n"):
         answer = float(NEGATIVES_DICT[equation])
     else:
-        answer = int(equation)
+        answer = float(equation)
     logger.debug(f"func returns: answer: {answer}")
     return float(answer)
 
 
 def main():
+    """Calculates an answer for an equation"""
     equation: str = input("Type in an equation:\n").replace(" ", "")
 
     equation = parce_and_replace_negative(equation)
     while True:
         try:
-            ob, cb = find_indexes(equation)
+            (ob, cb) = find_indexes(equation)
             equation = equation.replace(
                 equation[ob:cb+1], str(do_math(equation[ob+1:cb]))
             )
