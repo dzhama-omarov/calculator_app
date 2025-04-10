@@ -1,0 +1,297 @@
+2025-04-10 11:16:16,338 - DEBUG - logger - func called: parce_and_replace_negative( (((-5)+3)*2^3+10)/4 )
+2025-04-10 11:16:16,339 - DEBUG - logger - func called: replace_negative( -5.0 )
+2025-04-10 11:16:16,339 - DEBUG - logger - func returns:	 n0n
+2025-04-10 11:16:16,339 - DEBUG - logger - func returns:	 equation: ((n0n+3)*2^3+10)/4
+2025-04-10 11:16:16,339 - DEBUG - logger - func called: find_indexes( ((n0n+3)*2^3+10)/4 )
+2025-04-10 11:16:16,339 - DEBUG - logger - func returns:	 ob_ind, index: [1, 7]
+2025-04-10 11:16:16,339 - DEBUG - logger - func called: do_math( n0n+3 )
+2025-04-10 11:16:16,339 - DEBUG - logger - func called: do_plussub( n0n+3 )
+2025-04-10 11:16:16,345 - DEBUG - logger - func returns:	 answer: -2.0
+2025-04-10 11:16:16,345 - DEBUG - logger - func called: replace_negative( -2.0 )
+2025-04-10 11:16:16,345 - DEBUG - logger - func returns:	 new_key: n1n
+2025-04-10 11:16:16,345 - DEBUG - logger - func returns: equation:	 n1n
+2025-04-10 11:16:16,345 - DEBUG - logger - func called: find_indexes( (n1n*2^3+10)/4 )
+2025-04-10 11:16:16,345 - DEBUG - logger - func returns:	 ob_ind, index: [0, 11]
+2025-04-10 11:16:16,345 - DEBUG - logger - func called: do_math( n1n*2^3+10 )
+2025-04-10 11:16:16,345 - DEBUG - logger - func called: do_powers( n1n*2^3+10 )
+2025-04-10 11:16:16,346 - DEBUG - logger - func returns:	 equation: n1n*8.0+10
+2025-04-10 11:16:16,346 - DEBUG - logger - func called: do_multidiv( n1n*8.0+10 )
+2025-04-10 11:16:16,346 - DEBUG - logger - func returns:	 equation: -16.0+10
+2025-04-10 11:16:16,346 - DEBUG - logger - func called: do_plussub( -16.0+10 )
+2025-04-10 11:16:16,346 - DEBUG - logger - func returns:	 answer: -6.0
+2025-04-10 11:16:16,346 - DEBUG - logger - func called: replace_negative( -6.0 )
+2025-04-10 11:16:16,346 - DEBUG - logger - func returns:	 new_key: n2n
+2025-04-10 11:16:16,346 - DEBUG - logger - func returns: equation:	 n2n
+2025-04-10 11:16:16,346 - DEBUG - logger - func called: find_indexes( n2n/4 )
+2025-04-10 11:16:16,346 - INFO - logger - error intercepted: TypeError. Equation: n2n/4
+2025-04-10 11:16:16,346 - DEBUG - logger - func called: do_math( n2n/4 )
+2025-04-10 11:16:16,346 - DEBUG - logger - func called: do_multidiv( n2n/4 )
+2025-04-10 11:16:16,346 - DEBUG - logger - func returns:	 equation: -1.5
+2025-04-10 11:16:16,347 - DEBUG - logger - func called: do_plussub( -1.5 )
+2025-04-10 11:16:16,347 - DEBUG - logger - func returns:	 answer: -1.5
+2025-04-10 11:16:16,347 - DEBUG - logger - func called: replace_negative( -1.5 )
+2025-04-10 11:16:16,347 - DEBUG - logger - func returns:	 new_key: n3n
+2025-04-10 11:16:16,347 - DEBUG - logger - func returns: equation:	 n3n
+2025-04-10 11:16:16,347 - DEBUG - logger - func returns: answer: n3n
+2025-04-10 11:21:43,618 - DEBUG - logger - func called: parce_and_replace_negative( (((-5)+3)*2^3+10)/4 )
+2025-04-10 11:21:43,619 - DEBUG - logger - func called: replace_negative( -5.0 )
+2025-04-10 11:21:43,619 - DEBUG - logger - func returns:	 n0n
+2025-04-10 11:21:43,619 - DEBUG - logger - func returns:	 equation: ((n0n+3)*2^3+10)/4
+2025-04-10 11:21:43,619 - DEBUG - logger - func called: find_indexes( ((n0n+3)*2^3+10)/4 )
+2025-04-10 11:21:43,619 - DEBUG - logger - func returns:	 ob_ind, index: [1, 7]
+2025-04-10 11:21:43,619 - DEBUG - logger - func called: do_math( n0n+3 )
+2025-04-10 11:21:43,619 - DEBUG - logger - func called: do_plussub( n0n+3 )
+2025-04-10 11:21:43,619 - DEBUG - logger - func returns:	 answer: -2.0
+2025-04-10 11:21:43,620 - DEBUG - logger - func called: replace_negative( -2.0 )
+2025-04-10 11:21:43,620 - DEBUG - logger - func returns:	 new_key: n1n
+2025-04-10 11:21:43,620 - DEBUG - logger - func returns:	 equation: n1n
+2025-04-10 11:21:43,620 - DEBUG - logger - func called: find_indexes( (n1n*2^3+10)/4 )
+2025-04-10 11:21:43,620 - DEBUG - logger - func returns:	 ob_ind, index: [0, 11]
+2025-04-10 11:21:43,620 - DEBUG - logger - func called: do_math( n1n*2^3+10 )
+2025-04-10 11:21:43,620 - DEBUG - logger - func called: do_powers( n1n*2^3+10 )
+2025-04-10 11:21:43,620 - DEBUG - logger - func returns:	 equation: n1n*8.0+10
+2025-04-10 11:21:43,620 - DEBUG - logger - func called: do_multidiv( n1n*8.0+10 )
+2025-04-10 11:21:43,621 - DEBUG - logger - func returns:	 equation: -16.0+10
+2025-04-10 11:21:43,621 - DEBUG - logger - func called: do_plussub( -16.0+10 )
+2025-04-10 11:21:43,621 - DEBUG - logger - func returns:	 answer: -6.0
+2025-04-10 11:21:43,621 - DEBUG - logger - func called: replace_negative( -6.0 )
+2025-04-10 11:21:43,621 - DEBUG - logger - func returns:	 new_key: n2n
+2025-04-10 11:21:43,621 - DEBUG - logger - func returns:	 equation: n2n
+2025-04-10 11:21:43,621 - DEBUG - logger - func called: find_indexes( n2n/4 )
+2025-04-10 11:21:43,621 - INFO - logger - error intercepted: TypeError. Equation: n2n/4
+2025-04-10 11:21:43,621 - DEBUG - logger - func called: do_math( n2n/4 )
+2025-04-10 11:21:43,621 - DEBUG - logger - func called: do_multidiv( n2n/4 )
+2025-04-10 11:21:43,621 - DEBUG - logger - func returns:	 equation: -1.5
+2025-04-10 11:21:43,621 - DEBUG - logger - func called: do_plussub( -1.5 )
+2025-04-10 11:21:43,621 - DEBUG - logger - func returns:	 answer: -1.5
+2025-04-10 11:21:43,621 - DEBUG - logger - func called: replace_negative( -1.5 )
+2025-04-10 11:21:43,621 - DEBUG - logger - func returns:	 new_key: n3n
+2025-04-10 11:21:43,621 - DEBUG - logger - func returns:	 equation: n3n
+2025-04-10 11:21:43,621 - DEBUG - logger - func returns: answer: n3n
+2025-04-10 11:22:12,937 - DEBUG - logger - func called: parce_and_replace_negative( (((-5)+3)*2^3+10)/4 )
+2025-04-10 11:22:12,937 - DEBUG - logger - func called: replace_negative( -5.0 )
+2025-04-10 11:22:12,938 - DEBUG - logger - func returns:	 n0n
+2025-04-10 11:22:12,938 - DEBUG - logger - func returns:	 equation: ((n0n+3)*2^3+10)/4
+2025-04-10 11:22:12,938 - DEBUG - logger - func called: find_indexes( ((n0n+3)*2^3+10)/4 )
+2025-04-10 11:22:12,938 - DEBUG - logger - func returns:	 ob_ind, index: [1, 7]
+2025-04-10 11:22:12,938 - DEBUG - logger - func called: do_math( n0n+3 )
+2025-04-10 11:22:12,938 - DEBUG - logger - func called: do_plussub( n0n+3 )
+2025-04-10 11:22:12,938 - DEBUG - logger - func returns:	 answer: -2.0
+2025-04-10 11:22:12,938 - DEBUG - logger - func called: replace_negative( -2.0 )
+2025-04-10 11:22:12,938 - DEBUG - logger - func returns:	 new_key: n1n
+2025-04-10 11:22:12,938 - DEBUG - logger - func returns:	 equation: n1n
+2025-04-10 11:22:12,938 - DEBUG - logger - func called: find_indexes( (n1n*2^3+10)/4 )
+2025-04-10 11:22:12,938 - DEBUG - logger - func returns:	 ob_ind, index: [0, 11]
+2025-04-10 11:22:12,938 - DEBUG - logger - func called: do_math( n1n*2^3+10 )
+2025-04-10 11:22:12,938 - DEBUG - logger - func called: do_powers( n1n*2^3+10 )
+2025-04-10 11:22:12,939 - DEBUG - logger - func returns:	 equation: n1n*8.0+10
+2025-04-10 11:22:12,939 - DEBUG - logger - func called: do_multidiv( n1n*8.0+10 )
+2025-04-10 11:22:12,939 - DEBUG - logger - func returns:	 equation: -16.0+10
+2025-04-10 11:22:12,939 - DEBUG - logger - func called: do_plussub( -16.0+10 )
+2025-04-10 11:22:12,939 - DEBUG - logger - func returns:	 answer: -6.0
+2025-04-10 11:22:12,939 - DEBUG - logger - func called: replace_negative( -6.0 )
+2025-04-10 11:22:12,939 - DEBUG - logger - func returns:	 new_key: n2n
+2025-04-10 11:22:12,939 - DEBUG - logger - func returns:	 equation: n2n
+2025-04-10 11:22:12,939 - DEBUG - logger - func called: find_indexes( n2n/4 )
+2025-04-10 11:22:12,939 - INFO - logger - error intercepted: TypeError. Equation: n2n/4
+2025-04-10 11:22:12,939 - DEBUG - logger - func called: do_math( n2n/4 )
+2025-04-10 11:22:12,940 - DEBUG - logger - func called: do_multidiv( n2n/4 )
+2025-04-10 11:22:12,940 - DEBUG - logger - func returns:	 equation: -1.5
+2025-04-10 11:22:12,940 - DEBUG - logger - func called: do_plussub( -1.5 )
+2025-04-10 11:22:12,940 - DEBUG - logger - func returns:	 answer: -1.5
+2025-04-10 11:22:12,940 - DEBUG - logger - func called: replace_negative( -1.5 )
+2025-04-10 11:22:12,940 - DEBUG - logger - func returns:	 new_key: n3n
+2025-04-10 11:22:12,940 - DEBUG - logger - func returns:	 equation: n3n
+2025-04-10 11:22:12,940 - DEBUG - logger - func returns: answer: n3n
+2025-04-10 11:22:12,940 - DEBUG - logger - func called: return_final_answer( n3n )
+2025-04-10 11:22:12,940 - DEBUG - logger - func returns:	 answer: -1
+2025-04-10 11:23:53,095 - DEBUG - logger - func called: parce_and_replace_negative( (((-5)+3)*2^3+10)/4 )
+2025-04-10 11:23:53,096 - DEBUG - logger - func called: replace_negative( -5.0 )
+2025-04-10 11:23:53,096 - DEBUG - logger - func returns:	 n0n
+2025-04-10 11:23:53,096 - DEBUG - logger - func returns:	 equation: ((n0n+3)*2^3+10)/4
+2025-04-10 11:23:53,096 - DEBUG - logger - func called: find_indexes( ((n0n+3)*2^3+10)/4 )
+2025-04-10 11:23:53,096 - DEBUG - logger - func returns:	 ob_ind, index: [1, 7]
+2025-04-10 11:23:53,096 - DEBUG - logger - func called: do_math( n0n+3 )
+2025-04-10 11:23:53,096 - DEBUG - logger - func called: do_plussub( n0n+3 )
+2025-04-10 11:23:53,096 - DEBUG - logger - func returns:	 answer: -2.0
+2025-04-10 11:23:53,096 - DEBUG - logger - func called: replace_negative( -2.0 )
+2025-04-10 11:23:53,097 - DEBUG - logger - func returns:	 new_key: n1n
+2025-04-10 11:23:53,097 - DEBUG - logger - func returns:	 equation: n1n
+2025-04-10 11:23:53,097 - DEBUG - logger - func called: find_indexes( (n1n*2^3+10)/4 )
+2025-04-10 11:23:53,097 - DEBUG - logger - func returns:	 ob_ind, index: [0, 11]
+2025-04-10 11:23:53,097 - DEBUG - logger - func called: do_math( n1n*2^3+10 )
+2025-04-10 11:23:53,097 - DEBUG - logger - func called: do_powers( n1n*2^3+10 )
+2025-04-10 11:23:53,097 - DEBUG - logger - func returns:	 equation: n1n*8.0+10
+2025-04-10 11:23:53,097 - DEBUG - logger - func called: do_multidiv( n1n*8.0+10 )
+2025-04-10 11:23:53,097 - DEBUG - logger - func returns:	 equation: -16.0+10
+2025-04-10 11:23:53,097 - DEBUG - logger - func called: do_plussub( -16.0+10 )
+2025-04-10 11:23:53,098 - DEBUG - logger - func returns:	 answer: -6.0
+2025-04-10 11:23:53,098 - DEBUG - logger - func called: replace_negative( -6.0 )
+2025-04-10 11:23:53,098 - DEBUG - logger - func returns:	 new_key: n2n
+2025-04-10 11:23:53,098 - DEBUG - logger - func returns:	 equation: n2n
+2025-04-10 11:23:53,098 - DEBUG - logger - func called: find_indexes( n2n/4 )
+2025-04-10 11:23:53,098 - INFO - logger - error intercepted: TypeError. Equation: n2n/4
+2025-04-10 11:23:53,098 - DEBUG - logger - func called: do_math( n2n/4 )
+2025-04-10 11:23:53,098 - DEBUG - logger - func called: do_multidiv( n2n/4 )
+2025-04-10 11:23:53,098 - DEBUG - logger - func returns:	 equation: -1.5
+2025-04-10 11:23:53,098 - DEBUG - logger - func called: do_plussub( -1.5 )
+2025-04-10 11:23:53,098 - DEBUG - logger - func returns:	 answer: -1.5
+2025-04-10 11:23:53,098 - DEBUG - logger - func called: replace_negative( -1.5 )
+2025-04-10 11:23:53,098 - DEBUG - logger - func returns:	 new_key: n3n
+2025-04-10 11:23:53,098 - DEBUG - logger - func returns:	 equation: n3n
+2025-04-10 11:23:53,098 - DEBUG - logger - func returns: answer: n3n
+2025-04-10 11:23:53,098 - DEBUG - logger - func called: return_final_answer( n3n )
+2025-04-10 11:23:53,098 - DEBUG - logger - func returns:	 answer: -1
+2025-04-10 11:24:12,799 - DEBUG - logger - func called: parce_and_replace_negative( (((-5)+3)*2^3+10)/4 )
+2025-04-10 11:24:12,800 - DEBUG - logger - func called: replace_negative( -5.0 )
+2025-04-10 11:24:12,800 - DEBUG - logger - func returns:	 n0n
+2025-04-10 11:24:12,800 - DEBUG - logger - func returns:	 equation: ((n0n+3)*2^3+10)/4
+2025-04-10 11:24:12,800 - DEBUG - logger - func called: find_indexes( ((n0n+3)*2^3+10)/4 )
+2025-04-10 11:24:12,800 - DEBUG - logger - func returns:	 ob_ind, index: [1, 7]
+2025-04-10 11:24:12,800 - DEBUG - logger - func called: do_math( n0n+3 )
+2025-04-10 11:24:12,800 - DEBUG - logger - func called: do_plussub( n0n+3 )
+2025-04-10 11:24:12,801 - DEBUG - logger - func returns:	 answer: -2.0
+2025-04-10 11:24:12,801 - DEBUG - logger - func called: replace_negative( -2.0 )
+2025-04-10 11:24:12,801 - DEBUG - logger - func returns:	 new_key: n1n
+2025-04-10 11:24:12,801 - DEBUG - logger - func returns:	 equation: n1n
+2025-04-10 11:24:12,801 - DEBUG - logger - func called: find_indexes( (n1n*2^3+10)/4 )
+2025-04-10 11:24:12,801 - DEBUG - logger - func returns:	 ob_ind, index: [0, 11]
+2025-04-10 11:24:12,801 - DEBUG - logger - func called: do_math( n1n*2^3+10 )
+2025-04-10 11:24:12,801 - DEBUG - logger - func called: do_powers( n1n*2^3+10 )
+2025-04-10 11:24:12,802 - DEBUG - logger - func returns:	 equation: n1n*8.0+10
+2025-04-10 11:24:12,802 - DEBUG - logger - func called: do_multidiv( n1n*8.0+10 )
+2025-04-10 11:24:12,803 - DEBUG - logger - func returns:	 equation: -16.0+10
+2025-04-10 11:24:12,803 - DEBUG - logger - func called: do_plussub( -16.0+10 )
+2025-04-10 11:24:12,803 - DEBUG - logger - func returns:	 answer: -6.0
+2025-04-10 11:24:12,803 - DEBUG - logger - func called: replace_negative( -6.0 )
+2025-04-10 11:24:12,803 - DEBUG - logger - func returns:	 new_key: n2n
+2025-04-10 11:24:12,803 - DEBUG - logger - func returns:	 equation: n2n
+2025-04-10 11:24:12,803 - DEBUG - logger - func called: find_indexes( n2n/4 )
+2025-04-10 11:24:12,803 - INFO - logger - error intercepted: TypeError. Equation: n2n/4
+2025-04-10 11:24:12,803 - DEBUG - logger - func called: do_math( n2n/4 )
+2025-04-10 11:24:12,803 - DEBUG - logger - func called: do_multidiv( n2n/4 )
+2025-04-10 11:24:12,803 - DEBUG - logger - func returns:	 equation: -1.5
+2025-04-10 11:24:12,803 - DEBUG - logger - func called: do_plussub( -1.5 )
+2025-04-10 11:24:12,803 - DEBUG - logger - func returns:	 answer: -1.5
+2025-04-10 11:24:12,803 - DEBUG - logger - func called: replace_negative( -1.5 )
+2025-04-10 11:24:12,803 - DEBUG - logger - func returns:	 new_key: n3n
+2025-04-10 11:24:12,803 - DEBUG - logger - func returns:	 equation: n3n
+2025-04-10 11:24:12,803 - DEBUG - logger - func returns: answer: n3n
+2025-04-10 11:24:18,860 - DEBUG - logger - func called: return_final_answer( n3n )
+2025-04-10 11:24:52,293 - DEBUG - logger - func called: parce_and_replace_negative( (((-5)+3)*2^3+10)/4 )
+2025-04-10 11:24:52,293 - DEBUG - logger - func called: replace_negative( -5.0 )
+2025-04-10 11:24:52,293 - DEBUG - logger - func returns:	 n0n
+2025-04-10 11:24:52,293 - DEBUG - logger - func returns:	 equation: ((n0n+3)*2^3+10)/4
+2025-04-10 11:24:52,293 - DEBUG - logger - func called: find_indexes( ((n0n+3)*2^3+10)/4 )
+2025-04-10 11:24:52,293 - DEBUG - logger - func returns:	 ob_ind, index: [1, 7]
+2025-04-10 11:24:52,293 - DEBUG - logger - func called: do_math( n0n+3 )
+2025-04-10 11:24:52,293 - DEBUG - logger - func called: do_plussub( n0n+3 )
+2025-04-10 11:24:52,294 - DEBUG - logger - func returns:	 answer: -2.0
+2025-04-10 11:24:52,294 - DEBUG - logger - func called: replace_negative( -2.0 )
+2025-04-10 11:24:52,294 - DEBUG - logger - func returns:	 new_key: n1n
+2025-04-10 11:24:52,294 - DEBUG - logger - func returns:	 equation: n1n
+2025-04-10 11:24:52,294 - DEBUG - logger - func called: find_indexes( (n1n*2^3+10)/4 )
+2025-04-10 11:24:52,294 - DEBUG - logger - func returns:	 ob_ind, index: [0, 11]
+2025-04-10 11:24:52,294 - DEBUG - logger - func called: do_math( n1n*2^3+10 )
+2025-04-10 11:24:52,294 - DEBUG - logger - func called: do_powers( n1n*2^3+10 )
+2025-04-10 11:24:52,294 - DEBUG - logger - func returns:	 equation: n1n*8.0+10
+2025-04-10 11:24:52,294 - DEBUG - logger - func called: do_multidiv( n1n*8.0+10 )
+2025-04-10 11:24:52,294 - DEBUG - logger - func returns:	 equation: -16.0+10
+2025-04-10 11:24:52,294 - DEBUG - logger - func called: do_plussub( -16.0+10 )
+2025-04-10 11:24:52,294 - DEBUG - logger - func returns:	 answer: -6.0
+2025-04-10 11:24:52,294 - DEBUG - logger - func called: replace_negative( -6.0 )
+2025-04-10 11:24:52,294 - DEBUG - logger - func returns:	 new_key: n2n
+2025-04-10 11:24:52,295 - DEBUG - logger - func returns:	 equation: n2n
+2025-04-10 11:24:52,295 - DEBUG - logger - func called: find_indexes( n2n/4 )
+2025-04-10 11:24:52,295 - INFO - logger - error intercepted: TypeError. Equation: n2n/4
+2025-04-10 11:24:52,295 - DEBUG - logger - func called: do_math( n2n/4 )
+2025-04-10 11:24:52,295 - DEBUG - logger - func called: do_multidiv( n2n/4 )
+2025-04-10 11:24:52,295 - DEBUG - logger - func returns:	 equation: -1.5
+2025-04-10 11:24:52,295 - DEBUG - logger - func called: do_plussub( -1.5 )
+2025-04-10 11:24:52,295 - DEBUG - logger - func returns:	 answer: -1.5
+2025-04-10 11:24:52,295 - DEBUG - logger - func called: replace_negative( -1.5 )
+2025-04-10 11:24:52,295 - DEBUG - logger - func returns:	 new_key: n3n
+2025-04-10 11:24:52,295 - DEBUG - logger - func returns:	 equation: n3n
+2025-04-10 11:24:52,295 - DEBUG - logger - func returns: answer: n3n
+2025-04-10 11:24:52,295 - DEBUG - logger - func called: return_final_answer( n3n )
+2025-04-10 11:24:52,295 - DEBUG - logger - func returns:	 answer: -1.5
+2025-04-10 11:27:10,526 - DEBUG - logger - 
+2025-04-10 11:27:10,526 - DEBUG - logger - Program started
+2025-04-10 11:27:12,589 - DEBUG - logger - func called: parce_and_replace_negative( (((-5)+3)*2^3+10)/4 )
+2025-04-10 11:27:12,590 - DEBUG - logger - func called: replace_negative( -5.0 )
+2025-04-10 11:27:12,590 - DEBUG - logger - func returns:	 n0n
+2025-04-10 11:27:12,590 - DEBUG - logger - func returns:	 equation: ((n0n+3)*2^3+10)/4
+2025-04-10 11:27:12,590 - DEBUG - logger - func called: find_indexes( ((n0n+3)*2^3+10)/4 )
+2025-04-10 11:27:12,590 - DEBUG - logger - func returns:	 ob_ind, index: [1, 7]
+2025-04-10 11:27:12,590 - DEBUG - logger - func called: do_math( n0n+3 )
+2025-04-10 11:27:12,590 - DEBUG - logger - func called: do_plussub( n0n+3 )
+2025-04-10 11:27:12,590 - DEBUG - logger - func returns:	 answer: -2.0
+2025-04-10 11:27:12,590 - DEBUG - logger - func called: replace_negative( -2.0 )
+2025-04-10 11:27:12,590 - DEBUG - logger - func returns:	 new_key: n1n
+2025-04-10 11:27:12,590 - DEBUG - logger - func returns:	 equation: n1n
+2025-04-10 11:27:12,590 - DEBUG - logger - func called: find_indexes( (n1n*2^3+10)/4 )
+2025-04-10 11:27:12,590 - DEBUG - logger - func returns:	 ob_ind, index: [0, 11]
+2025-04-10 11:27:12,590 - DEBUG - logger - func called: do_math( n1n*2^3+10 )
+2025-04-10 11:27:12,591 - DEBUG - logger - func called: do_powers( n1n*2^3+10 )
+2025-04-10 11:27:12,591 - DEBUG - logger - func returns:	 equation: n1n*8.0+10
+2025-04-10 11:27:12,591 - DEBUG - logger - func called: do_multidiv( n1n*8.0+10 )
+2025-04-10 11:27:12,591 - DEBUG - logger - func returns:	 equation: -16.0+10
+2025-04-10 11:27:12,591 - DEBUG - logger - func called: do_plussub( -16.0+10 )
+2025-04-10 11:27:12,591 - DEBUG - logger - func returns:	 answer: -6.0
+2025-04-10 11:27:12,591 - DEBUG - logger - func called: replace_negative( -6.0 )
+2025-04-10 11:27:12,591 - DEBUG - logger - func returns:	 new_key: n2n
+2025-04-10 11:27:12,591 - DEBUG - logger - func returns:	 equation: n2n
+2025-04-10 11:27:12,591 - DEBUG - logger - func called: find_indexes( n2n/4 )
+2025-04-10 11:27:12,592 - INFO - logger - error intercepted: TypeError. Equation: n2n/4
+2025-04-10 11:27:12,592 - DEBUG - logger - func called: do_math( n2n/4 )
+2025-04-10 11:27:12,592 - DEBUG - logger - func called: do_multidiv( n2n/4 )
+2025-04-10 11:27:12,592 - DEBUG - logger - func returns:	 equation: -1.5
+2025-04-10 11:27:12,592 - DEBUG - logger - func called: do_plussub( -1.5 )
+2025-04-10 11:27:12,592 - DEBUG - logger - func returns:	 answer: -1.5
+2025-04-10 11:27:12,592 - DEBUG - logger - func called: replace_negative( -1.5 )
+2025-04-10 11:27:12,592 - DEBUG - logger - func returns:	 new_key: n3n
+2025-04-10 11:27:12,592 - DEBUG - logger - func returns:	 equation: n3n
+2025-04-10 11:27:12,592 - DEBUG - logger - func returns: answer: n3n
+2025-04-10 11:27:12,592 - DEBUG - logger - func called: return_final_answer( n3n )
+2025-04-10 11:27:12,592 - DEBUG - logger - func returns:	 answer: -1.5
+2025-04-10 11:27:12,592 - DEBUG - logger - Program finished
+2025-04-10 11:27:51,886 - DEBUG - logger - 
+2025-04-10 11:27:51,886 - DEBUG - logger - Program started
+2025-04-10 11:27:54,165 - DEBUG - logger - func called: parce_and_replace_negative( (((-5)+3)*2^3+10)/4 )
+2025-04-10 11:27:54,165 - DEBUG - logger - func called: replace_negative( -5.0 )
+2025-04-10 11:27:54,165 - DEBUG - logger - func returns: n0n
+2025-04-10 11:27:54,166 - DEBUG - logger - func returns: equation: ((n0n+3)*2^3+10)/4
+2025-04-10 11:27:54,166 - DEBUG - logger - func called: find_indexes( ((n0n+3)*2^3+10)/4 )
+2025-04-10 11:27:54,166 - DEBUG - logger - func returns: ob_ind, index: [1, 7]
+2025-04-10 11:27:54,166 - DEBUG - logger - func called: do_math( n0n+3 )
+2025-04-10 11:27:54,166 - DEBUG - logger - func called: do_plussub( n0n+3 )
+2025-04-10 11:27:54,166 - DEBUG - logger - func returns: answer: -2.0
+2025-04-10 11:27:54,166 - DEBUG - logger - func called: replace_negative( -2.0 )
+2025-04-10 11:27:54,166 - DEBUG - logger - func returns: new_key: n1n
+2025-04-10 11:27:54,166 - DEBUG - logger - func returns: equation: n1n
+2025-04-10 11:27:54,166 - DEBUG - logger - func called: find_indexes( (n1n*2^3+10)/4 )
+2025-04-10 11:27:54,166 - DEBUG - logger - func returns: ob_ind, index: [0, 11]
+2025-04-10 11:27:54,166 - DEBUG - logger - func called: do_math( n1n*2^3+10 )
+2025-04-10 11:27:54,166 - DEBUG - logger - func called: do_powers( n1n*2^3+10 )
+2025-04-10 11:27:54,167 - DEBUG - logger - func returns: equation: n1n*8.0+10
+2025-04-10 11:27:54,167 - DEBUG - logger - func called: do_multidiv( n1n*8.0+10 )
+2025-04-10 11:27:54,167 - DEBUG - logger - func returns: equation: -16.0+10
+2025-04-10 11:27:54,167 - DEBUG - logger - func called: do_plussub( -16.0+10 )
+2025-04-10 11:27:54,167 - DEBUG - logger - func returns: answer: -6.0
+2025-04-10 11:27:54,167 - DEBUG - logger - func called: replace_negative( -6.0 )
+2025-04-10 11:27:54,167 - DEBUG - logger - func returns: new_key: n2n
+2025-04-10 11:27:54,167 - DEBUG - logger - func returns: equation: n2n
+2025-04-10 11:27:54,167 - DEBUG - logger - func called: find_indexes( n2n/4 )
+2025-04-10 11:27:54,167 - INFO - logger - error intercepted: TypeError. Equation: n2n/4
+2025-04-10 11:27:54,167 - DEBUG - logger - func called: do_math( n2n/4 )
+2025-04-10 11:27:54,168 - DEBUG - logger - func called: do_multidiv( n2n/4 )
+2025-04-10 11:27:54,168 - DEBUG - logger - func returns: equation: -1.5
+2025-04-10 11:27:54,168 - DEBUG - logger - func called: do_plussub( -1.5 )
+2025-04-10 11:27:54,168 - DEBUG - logger - func returns: answer: -1.5
+2025-04-10 11:27:54,168 - DEBUG - logger - func called: replace_negative( -1.5 )
+2025-04-10 11:27:54,168 - DEBUG - logger - func returns: new_key: n3n
+2025-04-10 11:27:54,168 - DEBUG - logger - func returns: equation: n3n
+2025-04-10 11:27:54,168 - DEBUG - logger - func returns: answer: n3n
+2025-04-10 11:27:54,168 - DEBUG - logger - func called: return_final_answer( n3n )
+2025-04-10 11:27:54,168 - DEBUG - logger - func returns: answer: -1.5
+2025-04-10 11:27:54,168 - DEBUG - logger - Program finished
