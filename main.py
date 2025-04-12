@@ -129,16 +129,17 @@ def do_math(equation: str):
 
 def return_final_answer(equation: str) -> float:
     logger.debug(f"func called: return_final_answer( {equation} )")
-    if equation.startswith("n") and equation.endswith("n"):
-        answer = float(NEGATIVES_DICT[equation])
-    else:
-        answer = int(equation)
-    logger.debug(f"func returns: answer: {answer}")
-    return float(answer)
+    if str(equation).startswith("n") and str(equation).endswith("n"):
+        equation = NEGATIVES_DICT[equation]
+    logger.debug(f"func returns: answer: {equation}")
+    return float(equation)
 
 
-def main():
-    equation: str = input("Type in an equation:\n").replace(" ", "")
+def calculator(equation: str):
+    # equation: str = input("Type in an equation:\n").replace(" ", "")
+
+    logger.debug("")
+    logger.debug("Program started")
 
     equation = parce_and_replace_negative(equation)
     while True:
@@ -155,10 +156,8 @@ def main():
         except Exception as e:
             print(f"Error: {e}")
             break
+    logger.debug("Program finished")
 
 
 if __name__ == "__main__":
-    logger.debug("")
-    logger.debug("Program started")
-    print(main())
-    logger.debug("Program finished")
+    print(calculator("3+2"))
