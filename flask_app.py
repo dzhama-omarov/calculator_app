@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 from main import calculator
+import os
 
 app = Flask(__name__)
 
@@ -28,4 +29,4 @@ def calculate():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=os.getenv("FLASK_DEBUG", False) == "True")
