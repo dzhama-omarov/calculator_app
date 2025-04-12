@@ -1,4 +1,3 @@
-import sqlite3
 from logging import getLogger, config
 from dict_config import dict_config
 import re
@@ -18,7 +17,7 @@ def find_indexes(pattern: str):
         elif char == ")":
             if stack:
                 ob_ind = stack.pop()
-                logger.debug(f"func returns:  ob_ind, index: {[ob_ind, index]}")
+                logger.debug(f"func returns: ob_ind, index: {[ob_ind, index]}")
                 return ob_ind, index
             else:
                 raise ValueError("Too many closed brackets")

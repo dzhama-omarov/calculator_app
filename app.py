@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from main import calculator
+from calculator_logic import calculator
 import os
 
 app = Flask(__name__)
