@@ -1,5 +1,4 @@
 """This is a calculator program that supports long equations"""
-import sqlite3
 from logging import getLogger, config
 from dict_config import dict_config
 import re
@@ -31,7 +30,7 @@ def find_indexes(pattern: str) -> tuple[int, int]:
         elif char == ")":
             if stack:
                 ob_ind = stack.pop()
-                logger.debug(f"func returns:  ob_ind, index: {[ob_ind, index]}")
+                logger.debug(f"func returns: ob_ind, index: {[ob_ind, index]}")
                 return (ob_ind, index)
             else:
                 raise ValueError("Too many closed brackets")
@@ -209,16 +208,16 @@ def return_final_answer(equation: str) -> float:
         answer (float)"""
     logger.debug(f"func called: return_final_answer( {equation} )")
     if str(equation).startswith("n") and str(equation).endswith("n"):
-        answer = float(NEGATIVES_DICT[equation])
-    else:
-        answer = float(equation)
-    logger.debug(f"func returns: answer: {answer}")
-    return float(answer)
+        equation = NEGATIVES_DICT[equation]
+    logger.debug(f"func returns: answer: {equation}")
+    return float(equation)
 
 
-def main():
-    """Calculates an answer for an equation"""
-    equation: str = input("Type in an equation:\n").replace(" ", "")
+def calculator(equation: str):
+    # equation: str = input("Type in an equation:\n").replace(" ", "")
+
+    logger.debug("")
+    logger.debug("Program started")
 
     equation = parce_and_replace_negative(equation)
     while True:
@@ -235,10 +234,8 @@ def main():
         except Exception as e:
             print(f"Error: {e}")
             break
+    logger.debug("Program finished")
 
 
 if __name__ == "__main__":
-    logger.debug("")
-    logger.debug("Program started")
-    print(main())
-    logger.debug("Program finished")
+    print(calculator("3+2"))
