@@ -23,6 +23,8 @@ def find_indexes(pattern: str) -> tuple[int, int]:
         ValueError: if closed bracket was found,
         but no open bracket found before"""
     logger.debug(f"func called: find_indexes( {pattern} )")
+    if not pattern:
+        raise ValueError("Equation is empty")
     stack = []
     for index, char in enumerate(pattern):
         if char == "(":
@@ -49,6 +51,8 @@ def replace_negative(negative_n: float) -> str:
         replace_negative(-15) -> n0n
         """
     logger.debug(f"func called: replace_negative( {negative_n} )")
+    if not negative_n:
+        raise ValueError("Equation is empty")
     if NEGATIVES_DICT:
         last_key_num: int = int(
             list(
@@ -96,6 +100,8 @@ def do_powers(equation: str):
     Example
         do_powers(3^2*4-5) -> 9*4-5"""
     logger.debug(f"func called: do_powers( {equation} )")
+    if not equation:
+        raise ValueError("Equation is empty")
     matches = re.findall(r"(n?\d+\.?\d*+n?)\^(n?\d+\.?\d*+n?)", equation)
     for power_group in matches:
         num_pow_list = list()
@@ -125,6 +131,8 @@ def do_multidiv(equation: str) -> str:
     Example
         do_multidiv(9*4-5) -> 36-5"""
     logger.debug(f"func called: do_multidiv( {equation} )")
+    if not equation:
+        raise ValueError("Equation is empty")
     while "*" in equation or "/" in equation:
         match = re.search(r"(n?\d+\.?\d*+n?)([*/])(n?\d+\.?\d*+n?)", equation)
         nums_list = list()
@@ -146,7 +154,7 @@ def do_multidiv(equation: str) -> str:
     return equation
 
 
-def do_plussub(equation: str) -> int:
+def do_plussub(equation: str) -> float:
     """Performs mathematical operations regarding addition and subtractions.
 
     Args
@@ -158,6 +166,8 @@ def do_plussub(equation: str) -> int:
     Example
         do_multidiv(36-5) -> 31"""
     logger.debug(f"func called: do_plussub( {equation} )")
+    if not equation:
+        raise ValueError("Equation is empty")
     match: list[str] = re.findall(r"[+-]?n?\d+\.?\d*n?", equation)
     nums = list()
     for elem in match:
@@ -170,7 +180,7 @@ def do_plussub(equation: str) -> int:
                 nums.append(NEGATIVES_DICT[elem])
         else:
             nums.append(float(elem))
-    answer = sum(nums)
+    answer = float(sum(nums))
     logger.debug(f"func returns: answer: {answer}")
     return answer
 
@@ -197,7 +207,7 @@ def do_math(equation: str):
 
 
 def return_final_answer(equation: str) -> float:
-    """Checks if an equation is variable,
+    """Checks if an equation is a dict key variable,
     if so changes it back to negative number,
     and returns a float number.
 
@@ -219,6 +229,9 @@ def calculator(equation: str):
     logger.debug("")
     logger.debug("Program started")
 
+    if not equation:
+        raise ValueError("Equation is empty")
+
     equation = parce_and_replace_negative(equation)
     while True:
         try:
@@ -238,4 +251,4 @@ def calculator(equation: str):
 
 
 if __name__ == "__main__":
-    print(calculator("3+2"))
+    print(calculator("7+2"))
